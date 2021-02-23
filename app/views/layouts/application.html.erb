@@ -16,6 +16,10 @@
 
   <body>
     <%= render "layouts/nav" %>
+    <div class="container">
+      <%= render "layouts/flash_messages" %>
+      
     <%= yield %>
+    </div>
   </body>
 </html>

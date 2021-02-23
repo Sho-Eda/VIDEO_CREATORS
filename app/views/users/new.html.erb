@@ -4,7 +4,9 @@
       <%= render 'layouts/error_messages', model: f.object %>
 <% end %>
   
-    
+<div class="text-center">
+  <h1>Sign up</h1>
+</div>   
     
  <div class="row">
   <div class="col-sm-6 offset-sm-3">
@@ -12,7 +14,6 @@
     
     <%= form_with(model: @user, local: true) do |f| %>
     
-    <h1>Signup</h1>
     
       <div>
         <%= f.file_field :avatar %><br>
