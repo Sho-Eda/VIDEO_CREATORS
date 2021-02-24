@@ -1,24 +1,17 @@
 <div class="post_show">
   <div class="post_box">
     <div class="post_box_left">
-        <div class="post_image">
-            <%= image_tag @post.image.variant(combine_options:{gravity: :center, resize:"500x500^", crop:"500x500+0+0"}).processed, class: "post_img" %>
-        </div>   
+          
      </div>    
         
     <div class="post_box_right">    
       <div class="post_user_name_icon">
         <div class="post_user_icon">
-           <% if @post.user.avatar.attached? %>
-                <%= image_tag @post.user.avatar.variant(combine_options:{gravity: :center, resize:"40x40^", crop:"40x40+0+0"}).processed, class: "user_icon" %>
-            <% else %>
-                <%= image_tag("default-image.png", :size => "40x40") %>
-            <% end %> 
+           
         </div>
         
         <div class="post_user_name">
           <%= link_to @post.user.name, [@post.user] %>
-          <!--<= render 'users', users: @users %>-->
         </div>  
       </div>  
         
@@ -54,13 +47,7 @@
           <div class="comments_list">
            <% @comments.each do |c| %>
            <div class="comment_user_name_icon">
-             <div class="comment_user_icon">
-                <% if c.user.avatar.attached? %>
-                    <%= image_tag c.user.avatar.variant(combine_options:{gravity: :center, resize:"20x20^", crop:"20x20+0+0"}).processed, class: "user_icon" %>
-                <% else %>
-                    <%= image_tag("default-image.png", :size => "20x20") %>
-                <% end %> 
-              </div>
+            
              
               <div class="comment_name">
                 <%= link_to c.user.name, [c.user] %>
@@ -77,15 +64,10 @@
           
            <% end %>
           </div>
-          <div class="paginate">
-            <%= paginate @comments, left: 1, right: 5 %>
-          </div>    
+           
         </div>
             
-      <% @post_tags.each do |tag| %>
-        <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id) %>
-        <%= "(#{tag.posts.count})" %>
-      <% end %>
+      
     
   </div>  
   </div>

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
 
   get 'signup', to: 'users#new'
-  
+
   resources :users, only: [:index, :show, :create, :edit, :update] do
     member do
       get :followings
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   end  
 
   resources :posts  do
-    resources :comments
+    resources :comments, only: [:create, :destory]
   end
 
   resources :favorites, only: [:create, :destroy]  
