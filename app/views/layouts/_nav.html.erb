@@ -2,11 +2,12 @@
        
       <% if logged_in? %>
       <div class="header_logo">
-        <%= link_to embedded_svg("tabilog_logo.svg", class: "logo_svg"), user_path(current_user) %>
+        <%= link_to embedded_svg("tabilog_logo.svg", class: "logo_svg"), root_path(current_user) %>
       </div>
        
       <ul class="header_menus">
         <li><%= link_to 'Users', users_path %></li>
+        <li><%= link_to 'My profile', user_path(current_user) %></li>
         <li><%= link_to 'Logout', logout_path, method: :delete %></li>
       </ul>  
       <% else %>

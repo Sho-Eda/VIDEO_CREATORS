@@ -1,5 +1,14 @@
-<div class="user_info_right">
-    <div class="user_name_edit">
+ <div class="user_name_edit">
     <h1><%= @user.name %></h1>
-    </div> 
-</div>    
+</div> 
+
+<div class="user_name_edit">
+    <% if @user == current_user %>
+        <div class="user_edit">
+        <%= link_to "プロフィール編集", "/users/#{@user.id}/edit", class: 'btn btn-default' %>
+        </div>
+    <% else %>
+        <dvi></dvi>
+    <% end %>
+
+</div>

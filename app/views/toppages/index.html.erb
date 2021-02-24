@@ -3,3 +3,17 @@
     <h1>Welcome to the FILM STORAGE</h1>
   </div>
 </div>
+
+<div class="btn_all">
+            <div class="post_btn">
+            <%= link_to "Share!", "/posts/new", class: 'btn' %>
+            </div>
+            
+            <!--<div class="follow_btn">-->
+            <!--    <= render 'relationships/follow_button', user: @user, class: 'btn' %>    -->
+            <!--</div>>-->
+        </div> 
+
+<div class="user_post">
+        <%= render "posts/posts", posts:@posts %>
+</div>

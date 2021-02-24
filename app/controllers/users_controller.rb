@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :require_user_logged_in, only: [:index, :show]
 
     def index
         @users = User.order(id: :desc)
@@ -23,6 +24,31 @@ class UsersController < ApplicationController
           render :new
         end
     end
+
+    def edit
+      @user = User.find(params[:id])
+      unless @user == current_user
+        redirect_to  current_user
+      end
+    end
+
+    def update
+      @user = User.find(params[:id])
+      
+      if current_user == @user
+         if @user.update(user_params)
+          flash[:success] = "正常に更新されました"
+          redirect_to current_user
+         else
+          flash.now[:danger] = "更新に失敗しました"
+          render :edit
+         end
+      else
+        redirect_to current_user
+      end
+      
+    end  
+
 
     private
 
