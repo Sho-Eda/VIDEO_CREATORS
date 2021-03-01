@@ -1,15 +1,14 @@
 class PostsController < ApplicationController
-    before_action :require_user_logged_in
+    before_action :require_user_logged_in, only: [:new, :create, :destory, :edit, :update]
     before_action :corrent_user, only: [:destroy]
 
     def index
-        @posts = Post.all                #ビューで投稿一覧を表示するために全取得。
-        @post = current_user.posts.new   #ビューのform_withのmodelに使う。
+      
     end
     
     def show
         @post = Post.find(params[:id])
-        @comments = @post.comments
+        @comments = @post.comments.page(params[:page]).per(3)
         @comment = Comment.new
     end
 
@@ -23,7 +22,12 @@ class PostsController < ApplicationController
         if @post.save 
           flash[:success] = '投稿しました。'
           redirect_to current_user
+        else  
+          @posts = current_user.feed_posts.order(id: :desc).page(params[:page])  
+          flash.now[:danger] = 'メッセージの投稿に失敗しました。'
+          redirect_to current_user
         end
+
     end
 
     def destroy
@@ -33,21 +37,35 @@ class PostsController < ApplicationController
         
     end
 
+    def edit
+      @post = Post.find_by(id: params[:id])
+    end
+    
+    def update
+      @post = Post.find_by(id: params[:id])
+      
+      if @post.update(post_params)
+        flash[:success] = '更新しました'
+        redirect_to root_url
+        
+      else
+        flash.now[:danger] = '更新されませんでした'
+        render :edit
+      end
+    end
+
     private
 
     def post_params
         params.require(:post).permit(:content, :image)
-        # if image = params[:content][:image]
-        # @post.image.attach(image)
-        # end
-      end
+    end
       
-      def corrent_user
-        @post = current_user.posts.find_by(id: params[:id])
-        unless @post
-          redirect_to current_user
-        end
+    def corrent_user
+      @post = current_user.posts.find_by(id: params[:id])
+      unless @post
+        redirect_to current_user
       end
+    end
       
 
 end

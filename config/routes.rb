@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  root to: 'toppages#index'
+  
   get 'relationships/create'
   get 'relationships/destroy'
-  root to: 'toppages#index'
 
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'

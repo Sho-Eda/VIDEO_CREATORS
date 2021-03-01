@@ -1,7 +1,11 @@
 <div class="post_show">
   <div class="post_box">
     <div class="post_box_left">
-          
+      <% if @post.image? %>
+        <%= image_tag @post.image_url(:thumb2) if @post.image.present? %>   
+      <% else %>
+        <%= link_to (image_tag "/assets/default-image.jpg") %>
+      <% end %>
      </div>    
         
     <div class="post_box_right">    
@@ -25,7 +29,7 @@
             <%= link_to "Delete", @post, method: :delete, data: { confirm: "You sure?" }, class: 'btn_delete' %>
             <%= link_to "Edit", edit_post_path(@post), class: 'btn_edit' %>
           <% else %>
-            <%= render 'favorites/favorite_button', post: @post %>
+            <%#= render 'favorites/favorite_button', post: @post %>
           <% end %>
         </div>
         <div>
@@ -45,24 +49,24 @@
           <% end %>
           
           <div class="comments_list">
-           <% @comments.each do |c| %>
-           <div class="comment_user_name_icon">
-            
-             
-              <div class="comment_name">
-                <%= link_to c.user.name, [c.user] %>
+            <% @comments.each do |c| %>
+              <div class="comment_user_name_icon">
+              
+              
+                <div class="comment_name">
+                  <%= link_to c.user.name, [c.user] %>
+                </div>
+              </div>  
+              <div class="comment_list">
+                  <%= c.comment %>
               </div>
-            </div>  
-            <div class="comment_list">
-              <%= c.comment %>
-            </div>
-            <%  if c.user == current_user  %>
-              <div>
-                <%= link_to "delete", [@post, c], method: :delete, class: "btn" %>  
-              </div>
-            <% end %>
+              <% if c.user == current_user %>
+                <div>
+                    <%#= link_to "delete", [@post, c], method: :delete, class: "btn" %>  
+                </div>
+              <% end %>
           
-           <% end %>
+            <% end %>
           </div>
            
         </div>

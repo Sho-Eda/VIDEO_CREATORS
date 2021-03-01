@@ -4,11 +4,14 @@ class User < ApplicationRecord
     validates :name, presence: true, length: { maximum: 50 }
     validates :email, presence: true, length: { maximum: 255 },
                         format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
-                        uniqueness: { case_sensitive: false }                 
+                        uniqueness: { case_sensitive: false }   
+    validates :introduction, presence: false, length: { maximum: 200 }                                  
     has_secure_password
 
     
-    has_one_attached :avatar
+    # has_one_attached :avatar
+    # mount_uploader :image, ImageUploader
+    mount_uploader :avatar, AvatarUploader
     
     has_many :posts, dependent: :destroy
     has_many :relationships, dependent: :destroy
@@ -39,9 +42,9 @@ class User < ApplicationRecord
         
     def like(post)
         unless self == post
-        self.favorites.find_or_create_by(post_id: post.id)
+          self.favorites.find_or_create_by(post_id: post.id)
         end
-    end
+    end 
 
     def unlike(post)
         favorite = self.favorites.find_by(post_id: post.id)
@@ -49,6 +52,13 @@ class User < ApplicationRecord
     end
     
     def like?(post) 
-        self.likes.include?(post) #self.bookmarksで登録しているお気に入りを取得。include?(other_user) によって other_user が含まれていないかを確認しています。
+        self.likes.include?(post) 
     end
+
+    
+
+    def feed_posts
+        Post.where(user_id: self.following_ids + [self.id])
+    end 
+
 end

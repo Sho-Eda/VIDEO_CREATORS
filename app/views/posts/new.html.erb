@@ -1,13 +1,21 @@
-<%= form_with(model: @post, local: true) do |f| %>
-    <%= f.label :image, '画像' %>
-    <%= f.file_field :image %>
-    
-    <!--< end %>-->
-    
-    <div class="form-group">
-      <%= f.text_area :content, class: 'form-control', rows: 5 %>
-    </div>
-      <%= f.submit 'Post', class: 'btn btn-primary' %>
+<div class="post_new">
+
+  <%= form_with(model: @post, local: true) do |f| %>
+    <div class="image_post">
+        <%= f.label :image, 'HEADER IMAGE', class: "image_input_btn" %>
+        <%= f.file_field :image, class: "image_form" %>
+    </div>   
       
-       
-<% end %>
+    <div class="form-group col-sm-7 ">
+      <div class="row">
+          <h1><%= f.text_field :title, class: 'title form-control', placeholder: "TITLE" %></h1>
+          <%= f.text_area :content, class: 'form-control', placeholder: "After Effectsで作成したテロップテンプレートです。" %>
+          <%= f.submit 'POST', class: 'btn btn-primary' %>
+      </div>    
+    </div>
+
+      
+        
+  <% end %>
+
+</div>

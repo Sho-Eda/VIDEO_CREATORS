@@ -1,14 +1,18 @@
-<%= form_with(model: @post, local: true) do |f| %>
+<div class="post_edit">
+    <%= form_with(model: @post, local: true) do |f| %>
 
-    <%= f.label :image, '画像' %>
-    <%= f.file_field :image %>
-    
-    <% if @post.image.attached? %>
-         <%= image_tag @post.image.variant(combine_options:{gravity: :center, resize:"300x300^", crop:"300x300+0+0"}).processed %>
+        <%= image_tag(@post.image_url) %>
+
+        <div class="image_post">
+            <%= f.label :image, 'HEADER IMAGE', class: "image_input_btn" %>
+            <%= f.file_field :image, class: "image_form" %>
+            
+
+        </div>   
+        
+        <div class="form-group">
+            <%= f.text_area :content, class: 'form-control', rows: 5 %>
+        </div>
+            <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
     <% end %>
-    
-    <div class="form-group">
-        <%= f.text_area :content, class: 'form-control', rows: 5 %>
-    </div>
-        <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
-<% end %>
+</div>    

@@ -1,19 +1,31 @@
 <div class="media_all">
-  <ul class="list-unstyled">
-    <% posts.each do |post| %>
-          
-      <div class="media">
-        <div class="media-body">
-          
-      <%= link_to post.content,post_path(post) %>     
-    
-        </div>
-      </div>
-      
-    <% end %>
-    
-  </ul>
+  <div class="container ">
 
+    <%# <ul class="list-unstyled"> %>
+      <% posts.each do |post| %>
+            
+        <div class="col-md-4 media">
+          <% if post.image? %>
+            <%= link_to (image_tag post.image_url(:thumb) if post.image?), post_path(post), class: "image" %>
+          <% else %>
+            <%= link_to (image_tag "/assets/default-image.jpg"), post_path(post), class: "image" %>
+          <% end %>
+
+          <p><%= post.title %></p>  
+
+          <p><%= post.content %></p>  
+          
+            <%= post.created_at %>
+        </div>
+        
+      <% end %>
+      
+    <%# </ul> %>
+
+
+  <div class="posts_paginate">  
+      <%= paginate posts %>
   </div>    
-   
+    
+  </div>
 </div>

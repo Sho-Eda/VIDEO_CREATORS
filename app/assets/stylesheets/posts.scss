@@ -3,28 +3,70 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // パーシャル
 
+
 .media_all{
-    margin: 50px auto;
+    width: 100vw;
+    margin: 0px auto;
     padding: 0 auto;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
 }
 
 
-.list-unstyled{
-    display: inline-flex;
-    justify-content: flex-start;
-    flex-wrap:wrap;
-    margin-left: 190px;
+.media{
+    width: 400px;
+    height: auto;
+    background-color:white;
+    // border: 1px solid #d3d3d3;
+    margin-top: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 100px;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container{
+    max-width: 1400px;
+    width: 100%;
+}
+
+.media:first-child {
+    margin-top: 100px;
+}
+
+.image{
+    max-width: 100%;
+    height: auto;
+    width /***/: auto;
+}
+
+.media p{
+    padding-top: 20px;
+    font-size : 12px;
+    font-weight: 500;
+    text-align: left;
+}
+
+
+// .list-unstyled{
+//     width: 100vw;
+//     display: inline-flex;
+//     justify-content: flex-start;
+//     flex-wrap:wrap;
+//     // margin-left: 190px;
+//     margin: 0 auto;
+//     text-align: center;
     
-}
-
-// .post{
-//     width: 25%;
 // }
 
 .media-body{
     padding: 7px;
     margin: 0 20px 20px 0;
-    // box-shadow: 10px 10px;
+    
 }
 
 .posts_paginate{
@@ -33,16 +75,64 @@
     
 }
 
+.post_thumb{
+    // border-radius: 50%;
+    margin-right: 50px;
+}
+
+// 新規投稿画面
+
+.post_new{
+    margin: 150px auto;
+    text-align: center;
+    width: 100vw;
+
+}
+
+.form-group{
+    margin-left: 280px;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    // background-color: #97999B;
+    margin-top: 60px;
+    margin-bottom: 70px;
+
+}
+
+.image_post{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.image_input_btn{
+    font-family:  -apple-system,BlinkMacSystemFont,San Francisco,Helvetica Neue,Helvetica,Ubuntu,Roboto,Noto,Segoe UI,Arial,sans-serif;
+    background-color: #4b4b4b;
+    width: 280px;
+    height: 80px;
+    border-radius: 5px;
+    padding-top: 25px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.image_form{
+    display: none;
+    cursor: pointer;
+}
+
+
 // 詳細ページ
 
 .post_show{
-    // height: 100vh;
-    // background: #ff5;
-    // display: flex;
-    // justify-content: center;
-    margin: 50px;
-    // padding: 30px;
-
+    margin-top: 150px;
 }
 
 .post_box{
@@ -51,14 +141,6 @@
     background: #fff;
     display: flex;
     justify-content: start;
-    // margin-top: 70px;
-    // margin-right: 50px;
-    // top: 45%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // -webkit-transform: translate(-50%, -50%);
-    // -ms-transform: translate(-50%, -50%);
-    // position:absolute
 }
 
 .post_box_left{
@@ -180,4 +262,11 @@
 
 .paginate{
     margin-top: 10px;
+}
+
+// 編集
+
+.post_edit{
+    margin-top: 100px;
+    
 }

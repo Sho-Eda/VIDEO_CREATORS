@@ -1,3 +1,42 @@
-// Place all the styles related to the toppages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@media (min-width: 800px){
+
+.top_main{
+    width: 100%;
+    height: 100vh;
+    background: #fcf5eff;
+    position: relative;
+}
+
+.main_visual{
+    width: 100vw;    
+    height: 75%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: image-url('mv.jpg');
+  //   padding-top: 20%;  
+    display: flex;
+    justify-content: center;  
+}
+
+.main_visual_login{
+    width: 100vw;    
+    height: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: image-url('mv2.jpg');
+  //   padding-top: 20%;  
+    display: flex;
+    justify-content: center;  
+}
+  
+.test{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 248, 236);
+
+}
+  
+  
+}
