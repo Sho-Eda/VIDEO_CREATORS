@@ -1,0 +1,15 @@
+current directory: /Users/sho_eda/Desktop/Ruby_lesson/docker/portfolio2/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+/Users/sho_eda/.rbenv/versions/2.5.8/bin/ruby -I /Users/sho_eda/.rbenv/versions/2.5.8/lib/ruby/site_ruby/2.5.0 -r ./siteconf20210226-93157-t6506v.rb extconf.rb
+creating Makefile
+
+current directory: /Users/sho_eda/Desktop/Ruby_lesson/docker/portfolio2/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= clean
+
+current directory: /Users/sho_eda/Desktop/Ruby_lesson/docker/portfolio2/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\=
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/sho_eda/Desktop/Ruby_lesson/docker/portfolio2/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20210226-93157-l4zs6h/skiptrace/internal
