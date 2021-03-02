@@ -30,7 +30,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     original_filename if original_filename
   end
 
- process resize_to_fill: [5000, 5000, "Center"]
+ process resize_to_fill: [1920, 1080, "Center"]
 
  version :thumb do    
   process resize_to_fill: [400,225, "Center"]
