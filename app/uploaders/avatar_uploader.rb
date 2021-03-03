@@ -55,7 +55,11 @@ class AvatarUploader < CarrierWave::Uploader::Base
   process resize_to_fill: [150, 150]
 
   version :thumb do
-    process resize_to_fill: [60,60]
+    process resize_to_fill: [40,40]
+  end
+
+  version :thumb2 do
+    process resize_to_fill: [30,30]
   end
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.

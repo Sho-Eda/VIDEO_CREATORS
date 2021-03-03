@@ -18,9 +18,17 @@ Rails.application.routes.draw do
     end
   end  
 
+  # get 'download', to: 'posts#download'
+
   resources :posts  do
+    # member do
+    #   get '/download', to: "posts#download"
+    # end
+
     resources :comments, only: [:create, :destory]
   end
+
+  resources :reels, only: [:new, :create, :destory]
 
   resources :favorites, only: [:create, :destroy]  
   resources :relationships, only: [:create, :destroy]

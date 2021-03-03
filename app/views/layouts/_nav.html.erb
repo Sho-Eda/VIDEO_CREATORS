@@ -3,7 +3,7 @@
     <% if logged_in? %>
       <div class="header_main">
         <div class="header_logo">
-          <%= link_to embedded_svg("filmstorage.svg", class: "logo_svg"), root_url(current_user) %> 
+          <%= link_to embedded_svg("video_creators.svg", class: "logo_svg"), root_url(current_user) %> 
         </div>
         <ul class="header_menus">
           <li><%= link_to 'MY PAGE', user_path(current_user.id), class: "mypage_btn" %></li>
@@ -17,7 +17,7 @@
       </div>   
       <div class="header_main">
       <div class="header_logo">
-        <%= link_to embedded_svg("filmstorage.svg", class: "logo_svg"), "/" %>
+        <%= link_to embedded_svg("video_creators.svg", class: "logo_svg"), "/" %>
       </div>
         <ul class="header_menus">
           <li><%= link_to 'REGISTER', signup_path, class: "register" %></li>

@@ -1,4 +1,5 @@
 class ImageUploader < CarrierWave::Uploader::Base
+  
 
   include CarrierWave::MiniMagick
 
@@ -9,6 +10,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   else
     storage :fog
   end
+
+
 
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
@@ -32,13 +35,25 @@ class ImageUploader < CarrierWave::Uploader::Base
 
  process resize_to_fill: [1920, 1080, "Center"]
 
- version :thumb do    
+version :thumb do    
   process resize_to_fill: [400,225, "Center"]
 end
 
  version :thumb2 do    
    process resize_to_fill: [840,440, "Center"]
  end
+
+
+# ファイル名をランダム英数字に
+def filename
+  "#{secure_token}.#{file.extension}" if original_filename.present?
+end
+def secure_token
+  var = :"@#{mounted_as}_secure_token"
+  model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
+end
+
+
  
 
 end

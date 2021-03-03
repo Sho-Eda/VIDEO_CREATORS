@@ -5,14 +5,17 @@
         <%= f.label :image, 'HEADER IMAGE', class: "image_input_btn" %>
         <%= f.file_field :image, class: "image_form" %>
     </div>   
+
       
     <div class="form-group col-sm-7 ">
       <div class="row">
           <h1><%= f.text_field :title, class: 'title form-control', placeholder: "TITLE" %></h1>
           <%= f.text_area :content, class: 'form-control', placeholder: "After Effectsで作成したテロップテンプレートです。" %>
           <%= f.submit 'POST', class: 'btn btn-primary' %>
-      </div>    
+      </div>      
     </div>
+
+
 
       
         

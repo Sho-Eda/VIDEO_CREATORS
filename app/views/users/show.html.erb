@@ -46,21 +46,32 @@
                     
                     <div class="relationships_btn_all">
                         <div>
-                            <a href="<%= likes_user_path(@user) %>">Likes</a>
+                           <%#= likes_user_path(@user) %>
                         </div>
                         <div>
-                            <a href="<%= likes_user_path(@user) %>"><%= @count_likes %></a>
+                            <%#= likes_user_path(@user) %>
                         </div>
                     </div>
               </div>    
             </div>  
         </div>
     </div>   
+
+   
+    
+    
     
     <% if @user == current_user %>
         <div class="btn_all">
             <div class="post_btn">
             <%= link_to "SUBMIT YOUR SKIL", "/posts/new", class: 'btn' %>
+            </div>
+            
+        </div> 
+
+        <div class="btn_all">
+            <div class="post_btn">
+            <%= link_to "SUBMIT YOUR REEL", "/reels/new", class: 'btn' %>
             </div>
             
         </div> 
@@ -71,9 +82,14 @@
             </div>
         </div>    
     <% end %>
+
+    <%= render "reels/reels", reels:@reels %>
     
     <div class="user_post">
         <%= render "posts/posts", posts:@posts %>
+        
     </div>
+
+    
     
 </div>    

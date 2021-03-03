@@ -6,24 +6,41 @@
       <% else %>
         <%= link_to (image_tag "/assets/default-image.jpg") %>
       <% end %>
+
+  
+
      </div>    
+
         
     <div class="post_box_right">    
       <div class="post_user_name_icon">
         <div class="post_user_icon">
-           
+          <% if @post.user.avatar? %>
+            <div class="user_icon">
+                <%= image_tag @post.user.avatar_url(:thumb), class: "user_icon"%>
+            </div>    
+          <% else %>
+              <%= image_tag "/assets/default-avatar.png", class: "user_icon" %>
+          <% end %>  
         </div>
         
         <div class="post_user_name">
           <%= link_to @post.user.name, [@post.user] %>
         </div>  
+
+
       </div>  
         
         <div class="post_content">
             <%= @post.content  %>
-        </div>   
+        </div>  
+
+<%# ダウンロード %>
+        <%# <%= link_to "ダウンロード", download_post_path(@post), target: :_blank %> 
+
+
             
-          <!--編集と削除-->
+<!--編集と削除-->
         <div class="post_delete_edit">
           <% if current_user == @post.user %>
             <%= link_to "Delete", @post, method: :delete, data: { confirm: "You sure?" }, class: 'btn_delete' %>

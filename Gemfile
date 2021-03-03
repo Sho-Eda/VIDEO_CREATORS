@@ -76,3 +76,5 @@ gem 'dotenv-rails'
 gem 'kaminari'
 
 gem "aws-sdk-s3", require: false
+
+gem 'haml-rails'

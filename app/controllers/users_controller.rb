@@ -10,6 +10,9 @@ class UsersController < ApplicationController
 
         @posts = @user.posts.order(id: :desc).page(params[:page]).per(6)
         counts(@user)
+
+        @reels = @user.reels.order(id: :desc).page(params[:page]).per(6)
+        counts(@user)
     end
 
     def new
@@ -30,6 +33,7 @@ class UsersController < ApplicationController
 
     def edit
       @user = User.find(params[:id])
+
       unless @user == current_user
         redirect_to  current_user
       end

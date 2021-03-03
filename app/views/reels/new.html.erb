@@ -1,0 +1,10 @@
+<div class="reel_form">
+<%= form_with(model: @reel, local: true) do |f| %>
+  <div class="field">
+            <%= f.label :youtube_url, "YouTubeのURL" %>
+            <%= f.text_field :youtube_url, placeholder: 'youtube_url' %>
+  </div>
+
+  <%= f.submit 'POST', class: 'btn btn-primary btn-block' %>
+<% end %>
+</div>

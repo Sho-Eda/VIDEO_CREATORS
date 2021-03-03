@@ -11,11 +11,16 @@
             <%= link_to (image_tag "/assets/default-image.jpg"), post_path(post), class: "image" %>
           <% end %>
 
+          
+
           <p><%= post.title %></p>  
 
-          <p><%= post.content %></p>  
-          
-            <%= post.created_at %>
+          <%#= post.content %>
+          <button><%= link_to "READ MORE", post_path(post)%></button>
+          <%= post.created_at %>   
+          <%= post.user %>
+
+
         </div>
         
       <% end %>

@@ -1,14 +1,5 @@
-<% if logged_in? %>
-<div class="top_main">  
-    <div class="main_visual_login">
-    </div>    
 
-    <div class="user_post">
-        <%= render "posts/posts", posts:@posts %>
-    </div>
-</div>
 
-<% else %>
 <div class="top_main">  
     <div class="main_visual">
     </div>    
@@ -17,4 +8,4 @@
         <%= render "posts/posts", posts:@posts %>
     </div>
 </div>
-<% end %>
+
