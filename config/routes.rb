@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     end
   end  
 
-  # get 'download', to: 'posts#download'
+  post '/guest', to: 'guest_sessions#create'
 
   resources :posts  do
     # member do

@@ -24,6 +24,7 @@
        
               </div>
                 <p><%= @user.introduction %></p>
+                <p><%#= safe_join(@user.introduction.split("\n"),tag(:br)) %></p>
               <div class="relationships_btn">    
              
                     <div class="relationships_btn_all">
@@ -44,37 +45,32 @@
                         </div>
                     </div>
                     
-                    <div class="relationships_btn_all">
-                        <div>
+                    <%# <div class="relationships_btn_all"> %>
+                        <%# <div> %>
                            <%#= likes_user_path(@user) %>
-                        </div>
-                        <div>
+                        <%# </div>
+                        <div> %>
                             <%#= likes_user_path(@user) %>
-                        </div>
+                        <%# </div> %>
                     </div>
               </div>    
             </div>  
         </div>
     </div>   
 
-   
-    
-    
     
     <% if @user == current_user %>
         <div class="btn_all">
             <div class="post_btn">
-            <%= link_to "SUBMIT YOUR SKIL", "/posts/new", class: 'btn' %>
+                <%= link_to "SUBMIT YOUR SKIL", "/posts/new", class: 'btn post_reel' %>
             </div>
-            
-        </div> 
 
-        <div class="btn_all">
-            <div class="post_btn">
-            <%= link_to "SUBMIT YOUR REEL", "/reels/new", class: 'btn' %>
+             <div class="reel_btn">
+                <%= link_to "SUBMIT YOUR REEL", "/reels/new", class: 'btn reel_btn' %>
             </div>
             
         </div> 
+           
     <% else %>
         <div class="btn_all">
             <div class="follow_btn">
@@ -83,11 +79,11 @@
         </div>    
     <% end %>
 
-    <%= render "reels/reels", reels:@reels %>
-    
+    <div class="user_reel">
+        <%= render "reels/reels", reels:@reels %>
+    </div>
     <div class="user_post">
-        <%= render "posts/posts", posts:@posts %>
-        
+        <%= render "posts/posts", posts:@posts %>      
     </div>
 
     

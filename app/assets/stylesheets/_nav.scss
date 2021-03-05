@@ -23,16 +23,47 @@ header{
 }
 
 .header_main{
+    width: 100%;
     display: flex;
     background: #FFF;
-    border: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    border-top: 1px solid #ececec;
+    position: relative;
 }
+
+.header_menus_mypage{
+    height: 100%;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    color: white;   
+    // margin-top: 22px;
+    border-right: 1px solid #ececec;
+    padding-right: 8px;
+    position: absolute;
+    // top: 10px;
+    z-index: 1;
+}
+
+.header_menus_mypage li{
+    float: left;
+    text-decoration: none;
+    margin-top: 24px;
+}
+
+.header_menus_mypage a{
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
 
 .header_logo{
     height: 70px;
     margin: 0 auto;
     // padding-top: 11px;
-    padding-left: 130px;
+    // padding-left: 130px;
+    padding-right: 50px;
     color: white;
     text-decoration: none;
 }
@@ -67,6 +98,9 @@ header{
     letter-spacing: 1px;
 }
 
+
+
+
 .register{
     background-color: #ff9a03;
     padding-top: 29px;
@@ -96,13 +130,13 @@ header{
 }
 
 .mypage_btn{
-    border-left: 1px solid #ececec;
-    border-right: 1px solid #ececec;
-    padding-top: 29px;
+    // border-left: 1px solid #ececec;
+    // border-right: 1px solid #ececec;
+    padding-top: 27px;
     padding-bottom: 31px;
     padding-right: 40px;
     padding-left: 40px;
-    color: black
+    color: black;
 }
 
 .users_btn{

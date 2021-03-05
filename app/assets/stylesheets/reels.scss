@@ -1,6 +1,33 @@
 // Place all the styles related to the reels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 新規投稿
+
 .reel_form{
-  margin-top: 100px;
+  margin: 200px auto;
+  width: 70%
 }
+
+.reel_url{
+  margin: 30px auto;
+  width: 60%;
+  text-align: center;
+}
+
+.reel_post{
+  margin: 30px auto;
+  width: 30%;
+}
+
+
+// _reel
+.reel{
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.reel .col-md-3{
+  margin: 10px 40px;
+}
+

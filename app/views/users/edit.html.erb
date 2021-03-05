@@ -9,12 +9,13 @@
       <%= form_with(model: @user, local: true) do |f| %>
       
         <div>
-          <h2>Profile</h2>
+          <h2>YOUR PROFILE</h2>
         </div>
 <%# 画像 %>
-        <%= image_tag(@user.avatar_url, width: 200) if @user.avatar? %>
+        <%= image_tag @user.avatar_url if @user.avatar? %>
         <div class="form_block">
-          <%= f.file_field :avatar %><br>
+          
+          <%= f.file_field :avatar%><br>
         </div>
         <%= f.hidden_field :avatar_cache %>
           
@@ -29,7 +30,7 @@
           <%= f.label :introduction, "Introduction" %><br>
           <%= f.text_area :introduction, size: "90x8" %>
         </div>
-        
+
   
         <div class="form_block">
           <%= f.label :email, "Email" %><br>

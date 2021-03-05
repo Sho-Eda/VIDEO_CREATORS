@@ -78,3 +78,5 @@ gem 'kaminari'
 gem "aws-sdk-s3", require: false
 
 gem 'haml-rails'
+
+gem 'font-awesome-rails'

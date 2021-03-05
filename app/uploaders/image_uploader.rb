@@ -40,7 +40,7 @@ version :thumb do
 end
 
  version :thumb2 do    
-   process resize_to_fill: [840,440, "Center"]
+   process resize_to_fill: [640,360, "Center"]
  end
 
 

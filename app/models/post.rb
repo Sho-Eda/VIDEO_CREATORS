@@ -5,5 +5,5 @@ class Post < ApplicationRecord
   mount_uploader :image, ImageUploader
   # mount_uploader :video, VideoUploader
   
-  validates :title, presence: false, length: { maximum: 255 }
+  validates :title, presence: true, length: { maximum: 50 }
 end

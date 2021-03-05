@@ -2,9 +2,9 @@ class PostsController < ApplicationController
     before_action :require_user_logged_in, only: [:new, :create, :destory, :edit, :update]
     before_action :corrent_user, only: [:destroy]
 
-    # def index
-    #   @posts = current_user.posts.order(id: :desc).page(params[:page])
-    # end
+    def index
+      @posts = current_user.posts.order(id: :desc).page(params[:page]).per(3)
+    end
     
     def show
         @post = Post.find(params[:id])
@@ -18,7 +18,6 @@ class PostsController < ApplicationController
 
     def create
         @post = current_user.posts.build(post_params)
-
         
         if @post.save 
           flash[:success] = '投稿しました。'
@@ -47,7 +46,7 @@ class PostsController < ApplicationController
       
       if @post.update(post_params)
         flash[:success] = '更新しました'
-        redirect_to root_url
+        redirect_to @post
         
       else
         flash.now[:danger] = '更新されませんでした'
@@ -106,7 +105,7 @@ class PostsController < ApplicationController
     private
 
     def post_params
-        params.require(:post).permit(:content, :image)
+        params.require(:post).permit(:content, :image, :title)
     end
       
     def corrent_user

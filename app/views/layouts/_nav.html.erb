@@ -1,15 +1,22 @@
 
 <header>       
     <% if logged_in? %>
+     <div class="header_menus_mypage">
+          <ul>
+            <li><%= link_to 'MY PAGE', user_path(current_user.id), class: "mypage_btn"%></li>
+          </ul>  
+     </div>
+
       <div class="header_main">
         <div class="header_logo">
           <%= link_to embedded_svg("video_creators.svg", class: "logo_svg"), root_url(current_user) %> 
-        </div>
+      </div>
+
         <ul class="header_menus">
-          <li><%= link_to 'MY PAGE', user_path(current_user.id), class: "mypage_btn" %></li>
           <li><%= link_to 'USERS', users_path, class:"users_btn", class: "users_btn" %></li>
           <li><%= link_to 'LOGOUT', logout_path, method: :delete, class: "logout" %></li>
         </ul>  
+        
       </div>  
     <% else %>
       <div class="header_top">

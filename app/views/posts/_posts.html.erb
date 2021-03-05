@@ -1,10 +1,10 @@
 <div class="media_all">
-  <div class="container ">
-
+  <div class="container">
+    <div class="post_col">    
     <%# <ul class="list-unstyled"> %>
       <% posts.each do |post| %>
-            
-        <div class="col-md-4 media">
+       
+        <div class=" media">
           <% if post.image? %>
             <%= link_to (image_tag post.image_url(:thumb) if post.image?), post_path(post), class: "image" %>
           <% else %>
@@ -12,20 +12,36 @@
           <% end %>
 
           
-
+          <div class="post_title">
           <p><%= post.title %></p>  
+          </div>
 
-          <%#= post.content %>
-          <button><%= link_to "READ MORE", post_path(post)%></button>
-          <%= post.created_at %>   
-          <%= post.user %>
+          <div class="read_more">
+            <%= link_to "READ MORE", post_path(post), class:"btn" %>
+          </div>
+
+          <%#= post.created_at.strftime('%Y/%m/%d') %>   
+          
+          <div class="post_index_user">
+            <div>
+              <% if post.user.avatar? %>      
+                    <%= image_tag post.user.avatar_url, class: "post_user_icon"%>  
+              <% else %>
+                  <%= image_tag "/assets/default-avatar.png", class: "post_user_icon" %>
+              <% end %>  
+            </div>
+            <div >
+              <p>by <%= link_to post.user.name, [post.user] %></p>
+            </div>  
+          </div>    
 
 
         </div>
         
       <% end %>
       
-    <%# </ul> %>
+  
+    </div>
 
 
   <div class="posts_paginate">  

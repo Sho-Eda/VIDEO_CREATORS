@@ -7,7 +7,7 @@ class ReelsController < ApplicationController
   end
 
   def create
-    @reel = current_user.reels.build(reel_params)
+    @reel = current_user.reels.build(reel_params).per(3)
 
     url = params[:reel][:youtube_url]
     # url = url.last(11)

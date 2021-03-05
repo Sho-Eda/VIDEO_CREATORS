@@ -16,4 +16,12 @@ include SessionsHelper
     @count_followers = user.followers.count
     @count_likes = user.likes.count
   end
+
+  # def log_in(user)
+  #   session[:user_id] = user.id
+  # end
+
+  # def guest_user
+  #   current_user == User.find_by(email: 'guest@example.com')
+  # end
 end

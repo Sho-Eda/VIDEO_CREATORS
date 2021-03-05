@@ -17,11 +17,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "posts";
+@import "font-awesome";
  
- 
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+} 
+
  body{
   font-family:
   "apercu",sans-serif;
+  // font-size: 18px;
+  // line-height: 3;
 
   height: 100%;
   margin: 0 auto;
@@ -37,6 +44,10 @@
   color: black;
 }
 
+p{
+  line-height: 2;
+}
+
 ul{
   list-style: none;
 }
@@ -45,6 +56,9 @@ a{
   color: black;
   text-decoration: none;
 }
+
+
+
 
 /*ページネーション自体のデザイン*/
 .pagination>li>a {          
