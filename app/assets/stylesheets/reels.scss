@@ -24,26 +24,21 @@
 // _reel
 .reel{
   margin: 20px auto;
-  // padding-left: 20px;
   display: flex;
   justify-content: center;
 }
 
 .reel_content{
   display: flex;
-  // justify-content: center;
 }
 
 .reel .col-md-3{
-  // margin: 10px 40px;
   display: flex;
   justify-content: center;
-// }
 }
 
 .reel_delete{
   margin-top: 10px;
-  // margin-left: 10px;
   margin-bottom: 10px;
 }
 
@@ -63,12 +58,9 @@
 .reel .btn_show{
   height: 234px;
   padding: 115.9px 10px;
-  // background: #333;
   color: rgb(0, 0, 0);
   position: absolute;
   border: 1px solid #1d1d1d;
-  // border-radius: 5px;
-
 }
 
 .btn_show:hover{
