@@ -22,12 +22,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   end 
 
   def extension_whitelist
-    %w(png gif jpg jpeg mp4)
+    %w(png gif jpg jpeg MOV wmv mp4)
   end
 
-  def size_range
-    1..10.megabytes
-  end
+  # def size_range
+  #   1..1000.megabytes
+  # end
 
   def filename
     original_filename if original_filename

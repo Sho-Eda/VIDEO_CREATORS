@@ -23,11 +23,73 @@
 
 // _reel
 .reel{
-  margin: 0 auto;
-  padding-left: 20px;
+  margin: 20px auto;
+  // padding-left: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.reel_content{
+  display: flex;
+  // justify-content: center;
 }
 
 .reel .col-md-3{
-  margin: 10px 40px;
+  // margin: 10px 40px;
+  display: flex;
+  justify-content: center;
+// }
 }
 
+.reel_delete{
+  margin-top: 10px;
+  // margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.btn_delete:hover{
+  background-color: #d45854;
+  color: white;
+  text-decoration: none;
+}
+
+.reel_show_list{
+  width: 20px;
+  height: 234px;
+  position: relative;
+
+}
+
+.reel .btn_show{
+  height: 234px;
+  padding: 115.9px 10px;
+  // background: #333;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  border: 1px solid #1d1d1d;
+  // border-radius: 5px;
+
+}
+
+.btn_show:hover{
+  background-color: #E39F27;
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+
+// 詳細
+
+.reel_show_all{
+  height: 100vh;
+  text-align: center;
+  background-color: black;
+  position: relative;
+}
+
+.reel_show{
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translate(-50%);
+}

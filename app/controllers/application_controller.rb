@@ -15,6 +15,7 @@ include SessionsHelper
     @count_followings = user.followings.count
     @count_followers = user.followers.count
     @count_likes = user.likes.count
+    @count_reels = user.reels.count
   end
 
   # def log_in(user)

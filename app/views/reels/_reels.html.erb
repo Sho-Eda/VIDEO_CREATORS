@@ -1,13 +1,31 @@
 <%# if reels.present? %>
 <div class="reel">
-        <% reels.each do |reel| %>
-                <div class="col-md-3">
-                        <iframe width="400" height="225" src="https://www.youtube.com/embed/<%= reel.youtube_url[32..42]%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-        <% end %>
-        
-</div>
+
+<%# <p>Showreel</p> %>
+
+	<% reels.each do |reel| %>
+
+			<div class="col-md-3">
+				<div class="reel_content">
+					<iframe width="416" height="234" src="https://www.youtube.com/embed/<%= reel.youtube_url[32..42]%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>	
+							<% if current_user == reel.user %>
+									<div class="reel_delete">
+										<%= link_to "Delete", reel, method: :delete, data: { confirm: "You sure?" }, class: 'btn_delete' %>
+									</div>
+							<% else %>
+									<div class="reel_show_list">
+										<%= link_to ">", reel_path(reel.id), class: 'btn_show' %>
+									</div>		
+							<% end %> 
+			</div>
+
+								
+	<% end %>
+
 
 <div class="posts_paginate">  
       <%= paginate reels %>
-  </div>    
+</div>   
+
+</div>

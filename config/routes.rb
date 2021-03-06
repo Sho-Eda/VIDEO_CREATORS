@@ -25,10 +25,10 @@ Rails.application.routes.draw do
     #   get '/download', to: "posts#download"
     # end
 
-    resources :comments, only: [:create, :destory]
+    resources :comments, only: [:create, :destroy]
   end
 
-  resources :reels, only: [:new, :create, :destory]
+  resources :reels, only: [:show, :new, :create, :destroy, :edit, :update]
 
   resources :favorites, only: [:create, :destroy]  
   resources :relationships, only: [:create, :destroy]

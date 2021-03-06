@@ -3,7 +3,7 @@
     <% if logged_in? %>
      <div class="header_menus_mypage">
           <ul>
-            <li><%= link_to 'MY PAGE', user_path(current_user.id), class: "mypage_btn"%></li>
+            <li><%= link_to 'CREATORS', users_path, class: "users_btn"%></li>
           </ul>  
      </div>
 
@@ -13,7 +13,7 @@
       </div>
 
         <ul class="header_menus">
-          <li><%= link_to 'USERS', users_path, class:"users_btn", class: "users_btn" %></li>
+          <li><%= link_to 'MY PAGE', user_path(current_user.id), class:"mypage_btn" %></li>
           <li><%= link_to 'LOGOUT', logout_path, method: :delete, class: "logout" %></li>
         </ul>  
         
@@ -27,8 +27,8 @@
         <%= link_to embedded_svg("video_creators.svg", class: "logo_svg"), "/" %>
       </div>
         <ul class="header_menus">
-          <li><%= link_to 'REGISTER', signup_path, class: "register" %></li>
-          <li><%= link_to 'LOG IN', login_path, class: "login" %></li>
+          <li><%#= link_to 'REGISTER', signup_path, class: "register" %></li>
+          <li><%= link_to 'REGISTER / LOG IN', login_path, class: "login" %></li>
         </ul>
       </div>  
       

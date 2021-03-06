@@ -21,23 +21,23 @@
           <%= f.file_field :avatar, style: "display:none;"%>
       
         <div class="form-group">
-          <%= f.label :name, 'Name' %>
-          <%= f.text_field :name, class: 'form-control', placeholder: "Akira Tanaka" %>
+          <%= f.label :name, 'Name' %><br>
+          <%= f.text_field :name, class: 'form', placeholder: "Akira Tanaka" %>
         </div>
 
         <div class="form-group">
-          <%= f.label :email, 'Email' %>
-          <%= f.email_field :email, class: 'form-control', placeholder: "akira@mail.com"%>
+          <%= f.label :email, 'Email' %><br>
+          <%= f.email_field :email, class: 'form', placeholder: "akira@mail.com"%>
         </div>
 
         <div class="form-group">
-          <%= f.label :password, 'Password' %>
-          <%= f.password_field :password, class: 'form-control' %>
+          <%= f.label :password, 'Password' %><br>
+          <%= f.password_field :password, class: 'form' %>
         </div>
 
         <div class="form-group">
-          <%= f.label :password_confirmation, 'Confirmation' %>
-          <%= f.password_field :password_confirmation, class: 'form-control' %>
+          <%= f.label :password_confirmation, 'Confirmation' %><br>
+          <%= f.password_field :password_confirmation, class: 'form' %>
         </div>
 
         <%= f.submit 'Sign up', class: 'btn btn-primary btn-block' %>

@@ -4,9 +4,9 @@
       <% users.each do |user| %>
         <li class="user_list_icon">
           <% if user.avatar? %>
-            <%= image_tag user.avatar_url, class: "user_icon" %>
+            <%=link_to image_tag(user.avatar_url, class: "user_icon"),user_path(user) %>
           <% else %>
-            <%= image_tag "/assets/default-avatar.png", :size => "132x132", class: "mr-2 rounded" %>
+            <%=link_to image_tag "/assets/default-avatar.png", :size => "132x132", class: "mr-2 rounded" %>
           <% end %>
 
           <div class="user_list_text">

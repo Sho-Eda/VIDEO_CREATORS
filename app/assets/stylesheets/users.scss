@@ -89,18 +89,41 @@
     
 }
 
-.reel_btn .btn{
-    width: 90%;
+.post_btn .btn:hover{
+    background:  #E39F27;
+    color: white;
+}
+
+.follow_btn .btn{
+    width: 100%;
     height: auto;
-    margin-right: 40px;
+    margin-right:40px;
     margin-bottom: 40px;
-    background:  #49c5b6;
+    // background:  #4983c5;
     font-size: 15px;
     font-weight: 600;
     padding: 25px 35px;
     letter-spacing: 1px;
     color: #fff;
     
+}
+
+.reel_btn .btn{
+    width: 90%;
+    height: auto;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    background:  #E65D26;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 25px 35px;
+    letter-spacing: 1px;
+    color: #ffff
+}
+
+.reel_btn .btn:hover{
+    background: #49c5b6;
+    color: white;
 }
 
 .follow_btn .btn{
@@ -157,6 +180,14 @@
     margin-left: 40px;
 }
 
+.user_reel{
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+
+
 
 // 新規登録
 .user_new{
@@ -180,13 +211,13 @@
 
 
 .form_all{
-    width: 60%;
+    width: 50%;
     height: 100%;
     // background: #F9E547;
     margin: 0px auto;
     // padding-top: 100px;
     text-align: center;
-    padding: 30px 50px;
+    // padding: 30px 50px;
     // padding-left: 75px;
     // border: 2px solid black;
   
@@ -204,19 +235,21 @@
 }
 
 .form_block{
+    margin: 0px auto;
     padding-top: 40px;
+    padding-left: 30px;
     text-align: left;
 }
 
 .form{
     outline: none;
-    width: 70%;
+    width: 100%;
     height: 70%;
     border: none;
     border-bottom: 1px solid #000;
     // background-color: #F9E547;
     margin: 20px auto;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .form_all .btn{

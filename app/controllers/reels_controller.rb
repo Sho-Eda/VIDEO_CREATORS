@@ -1,13 +1,17 @@
 class ReelsController < ApplicationController
-  before_action :require_user_logged_in, only: [:new, :create, :destory]
+  before_action :require_user_logged_in, only: [:new, :create, :destory, :edit, :update]
   before_action :corrent_user, only: [:destroy]
+
+  def show
+    @reel = Reel.find(params[:id])
+  end
 
   def new
     @reel = current_user.reels.build
   end
 
   def create
-    @reel = current_user.reels.build(reel_params).per(3)
+    @reel = current_user.reels.build(reel_params)
 
     url = params[:reel][:youtube_url]
     # url = url.last(11)
@@ -30,6 +34,22 @@ class ReelsController < ApplicationController
     redirect_to current_user
   end
 
+  def edit
+    @reel = Reel.find_by(id: params[:id])
+  end
+
+  def update
+    @reel = Reel.find_by(id: params[:id])
+    
+    if @reel.update(reel_params)
+      flash[:success] = '更新しました'
+      redirect_to @reel
+      
+    else
+      flash.now[:danger] = '更新されませんでした'
+      render :edit
+    end
+  end
 
 
 private
