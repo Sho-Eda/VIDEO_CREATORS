@@ -63,6 +63,16 @@
   border: 1px solid #1d1d1d;
 }
 
+.reel .btn_delete{
+  padding: 0;
+  height: 20px;
+  // border-radius: 50%;
+  // border: 1px solid #1d1d1d;
+  // background-color: white;
+  // color: #000;
+  border-radius: 0;
+}
+
 .btn_show:hover{
   background-color: #E39F27;
   color: white;
