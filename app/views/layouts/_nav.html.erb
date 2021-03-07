@@ -1,5 +1,6 @@
 
 <header>       
+
     <% if logged_in? %>
      <div class="header_menus_mypage">
           <ul>
@@ -20,15 +21,15 @@
       </div>  
     <% else %>
       <div class="header_top">
-        <p>The awards of design, creativity and innovation on the internet</p>
+        <p>For all video creators.</p>
       </div>   
       <div class="header_main">
       <div class="header_logo">
         <%= link_to embedded_svg("video_creators.svg", class: "logo_svg"), "/" %>
       </div>
         <ul class="header_menus">
-          <li><%#= link_to 'REGISTER', signup_path, class: "register" %></li>
-          <li><%= link_to 'REGISTER / LOG IN', login_path, class: "login" %></li>
+          <%#= link_to 'REGISTER', signup_path, class: "register" %>
+          <li><%= link_to 'LOGIN', login_path, class: "login" %></li>
         </ul>
       </div>  
       

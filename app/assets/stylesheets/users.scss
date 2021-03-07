@@ -1,3 +1,337 @@
+@media (min-width: 300px){
+
+// ユーザ詳細
+.user{
+    width: 100vw;
+    // height: 320px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+.user_show{
+    width: 100%;
+    height: 75%;
+    margin: 0px auto;
+    // padding-left: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.user_info{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    text-align: left;
+    margin: 0 auto;
+    padding-top: 50px;
+
+}
+
+.user_info .user_icon{
+    border-radius: 50%;
+    margin-right: 17px;
+    margin-top: 10px;
+    width: 85px;
+    height: 85px;
+}
+
+
+.user_name_edit{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.user_info h1{
+    font-family:  -apple-system,BlinkMacSystemFont,San Francisco,Helvetica Neue,Helvetica,Ubuntu,Roboto,Noto,Segoe UI,Arial,sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.user_info p{
+    margin-left: 5px;
+    font-size: 11px;
+}
+
+.user_edit .btn{
+    border: 1px solid #d4d9df;
+    // margin-left: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;    
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.btn_all{ 
+    // display: flex;
+    // justify-content: center;
+    margin-bottom: 10px;
+}
+
+.post_btn{
+    text-align: center;
+}
+
+.post_btn .btn{
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    background:  #4983c5;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 20px 30px;
+    letter-spacing: 1px;
+    color: #fff;
+    
+}
+
+.post_btn .btn:hover{
+    background:  #E39F27;
+    color: white;
+}
+
+.follow_btn{
+    text-align: center;
+}
+
+.follow_btn .btn{
+    width: 40%;
+    height: auto;
+    // margin-right:40px;
+    margin-bottom: 40px;
+    // background:  #4983c5;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 20px 30px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+// .follow_btn .btn{
+//     width: 100%;
+//     height: auto;
+//     text-align: center;
+//     font-size: 15px;
+//     font-weight: 600;
+//     padding: 25px 35px;
+//     letter-spacing: 1px;
+// }
+
+
+.reel_btn{
+    text-align: center;
+}
+
+.reel_btn .btn{
+    width: 90%;
+    height: auto;
+    margin-bottom: 40px;
+    background:  #E65D26;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 20px 30px;
+    letter-spacing: 1px;
+    color: #ffff
+}
+
+.reel_btn .btn:hover{
+    background: #49c5b6;
+    color: white;
+}
+
+
+.user_post{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.relationships_btn_all{
+    text-align: center;
+   //  margin-left: 30px;
+   //  padding: 11px 24px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 50px;
+    padding-left: 5px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.relationships_btn{
+    color: white;
+    margin-top: 30px;
+    text-decoration: none;
+    display: flex;
+    justify-content: start;
+    // background-color: #222;
+}
+
+
+.user_reel{
+    // margin-bottom: 30px;
+    // padding-bottom: 30px;
+}
+
+.col-md-4{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+
+.user_reel{
+    width: 100%;
+    height: auto;
+    // margin-bottom: 20px;
+}
+
+
+
+
+// 新規登録
+.user_new{
+    margin: 0px auto;
+}
+
+
+.user_new .row{
+    margin: 0px auto;
+}
+
+// 編集ページ
+
+.user_edit_page{
+    align-items: center;
+    // background: #F5DF4D;
+    justify-items: center;
+    margin: 50px auto;
+}
+
+
+
+.form_all{
+    width: 50%;
+    height: 100%;
+    // background: #F9E547;
+    margin: 0px auto;
+    // padding-top: 100px;
+    text-align: center;
+    // padding: 30px 50px;
+    // padding-left: 75px;
+    // border: 2px solid black;
+  
+}
+
+.form_all h2{
+    text-align: center;
+    padding-right: 26px;
+    margin: 40px auto;
+    text-align: center;
+    font-weight: 600;
+    // font-style: italic;
+    // border-bottom: 1px solid #97999B;
+    
+}
+
+.form_block{
+    margin: 0px auto;
+    padding-top: 40px;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.form{
+    outline: none;
+    width: 100%;
+    height: 70%;
+    border: none;
+    border-bottom: 1px solid #000;
+    // background-color: #F9E547;
+    margin: 20px auto;
+    font-size: 16px;
+}
+
+.form_all .btn{
+    width: 150px;
+    margin-top:30px;
+    color: white;
+    font-size: 20px;
+    background: #61AFBD;
+}
+
+
+
+// ユーザ一覧
+
+.user_index{
+    margin: 60px auto;
+}
+
+// _users
+
+.users_list{
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+
+}
+
+.user_list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    // margin-left: 20px;
+}
+
+.user_list .user_list_icon .user_icon{
+    border-radius: 50%;
+    width: 60px;
+}
+
+.user_list .user_list_icon .mr-2{
+    width: 65px;
+    height: 65px;
+}
+
+.user_list_icon{
+    // margin: 0px 25px;
+    text-align: center;
+}
+
+.user_list_text{
+    margin: 5px 0px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.user_list_text p{
+    width: 100px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 800px){
+
 // show
 .user{
     width: 100vw;
@@ -8,11 +342,11 @@
 }
 
 .user_show{
-    width: 50%;
+    width: 100%;
     height: 75%;
     // background: #5ff;
     margin: 0px auto;
-    padding-left: 40px;
+    // padding-left: 40px;
     text-align: center;
     // padding-bottom: 20px;
 
@@ -20,7 +354,7 @@
 
 .user_info{
     display: flex;
-    justify-content: start;
+    justify-content: center;
     width: 90%;
     height: 40%;
     text-align: left;
@@ -40,12 +374,14 @@
 
 .user_name_edit{
     display:flex;
+    flex-wrap: wrap;
 }
 
 .user_info h1{
     font-family:  -apple-system,BlinkMacSystemFont,San Francisco,Helvetica Neue,Helvetica,Ubuntu,Roboto,Noto,Segoe UI,Arial,sans-serif;
     font-size: 35px;
     font-weight: bold;
+    margin-right: 30px;
 }
 
 .user_info p{
@@ -55,7 +391,7 @@
 
 .user_edit .btn{
     border: 1px solid #d4d9df;
-    margin-left: 30px;
+    // margin-left: 30px;
     margin-top: 24px;
     display: flex;
     justify-content: center;
@@ -103,7 +439,7 @@
     // background:  #4983c5;
     font-size: 15px;
     font-weight: 600;
-    padding: 25px 35px;
+    padding: 25px 105px;
     letter-spacing: 1px;
     color: #fff;
     
@@ -186,8 +522,6 @@
     height: auto;
     margin-bottom: 40px;
 }
-
-
 
 
 // 新規登録
@@ -284,13 +618,17 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
-    margin-left: 20px;
- 
-
+    // margin-left: 20px;
 }
 
 .user_list .user_list_icon .user_icon{
     border-radius: 50%;
+    width: 90%;
+}
+
+.user_list .user_list_icon .mr-2{
+    width: 150px;
+    height: 150px;
 }
 
 .user_list_icon{
@@ -301,9 +639,11 @@
 .user_list_text{
     margin: 20px 30px;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .user_list_text p{
     width: 100px;
+}
+
 }

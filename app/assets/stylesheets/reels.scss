@@ -1,6 +1,121 @@
 // Place all the styles related to the reels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@media (min-width: 300px){
+  // 新規投稿
+
+.reel_form{
+  margin: 200px auto;
+  width: 70%
+}
+
+.reel_url{
+  margin: 30px auto;
+  width: 60%;
+  text-align: center;
+}
+
+.reel_post{
+  margin: 30px auto;
+  width: 30%;
+}
+
+
+// _reel
+.reel{
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.reel_content{
+  display: flex;
+  justify-content: center;
+}
+
+.reel .col-md-3{
+  // display: flex;
+  // justify-content: center;
+}
+
+.reel_delete{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn_delete:hover{
+  background-color: #d45854;
+  color: white;
+  text-decoration: none;
+}
+
+.reel_show_list{
+  // width: 50%;
+  /* margin: 10px; */
+  margin-top: 10px;
+  /* margin-right: 20px; */
+  /* padding: 10px; */
+  height: 50px;
+  /* position: relative; */
+  text-align: center;
+
+}
+
+.reel .btn_show{
+  // height: 234px;
+  padding: 5px 100px;
+  color: rgb(255, 255, 255);
+  // position: absolute;
+  // border: 1px solid #1d1d1d;
+  background-color: rgb(190, 190, 190);
+}
+
+.reel .btn_delete{
+  display: block;
+  width: 50%;
+  /* padding: 0; */
+  margin: 10px auto;
+  text-align: center;
+  /* height: 20px; */
+  border-radius: 0;
+}
+
+.btn_show:hover{
+  background-color: #E39F27;
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+
+
+// 詳細
+
+.reel_show_all{
+  height: 100vh;
+  text-align: center;
+  background-color: black;
+  position: relative;
+}
+
+.reel_show{
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translate(-50%);
+}
+}
+
+
+
+
+
+
+
+
+@media (min-width: 800px){
 
 // 新規投稿
 
@@ -35,6 +150,7 @@
 .reel .col-md-3{
   display: flex;
   justify-content: center;
+  margin: 0 100px;
 }
 
 .reel_delete{
@@ -52,15 +168,16 @@
   width: 20px;
   height: 234px;
   position: relative;
+  margin: 0;
 
 }
 
 .reel .btn_show{
   height: 234px;
   padding: 115.9px 10px;
-  color: rgb(0, 0, 0);
+  color: #4b4b4b;
   position: absolute;
-  border: 1px solid #1d1d1d;
+  background-color: #ebebeb;
 }
 
 .reel .btn_delete{
@@ -71,6 +188,7 @@
   // background-color: white;
   // color: #000;
   border-radius: 0;
+  margin: 0;
 }
 
 .btn_show:hover{
@@ -94,4 +212,6 @@
   top: 120px;
   left: 50%;
   transform: translate(-50%);
+}
+
 }
