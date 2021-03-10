@@ -3,7 +3,7 @@
     <div class="post_col">    
       <% posts.each do |post| %>
        
-        <div class=" media">
+        <div class="media">
           <% if post.image? %>
             <%= link_to (image_tag post.image_url(:thumb) if post.image?), post_path(post), class: "image" %>
           <% else %>

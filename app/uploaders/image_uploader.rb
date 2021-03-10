@@ -21,14 +21,6 @@ class ImageUploader < CarrierWave::Uploader::Base
     %w[png gif jpg jpeg MOV wmv mp4]
   end
 
-  # def size_range
-  #   1..1000.megabytes
-  # end
-
-  # def filename
-  #   original_filename
-  # end
-
   process resize_to_fill: [1920, 1080, 'Center']
 
   version :thumb do
