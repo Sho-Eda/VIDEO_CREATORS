@@ -4,6 +4,6 @@ class Post < ApplicationRecord
   # has_one_attached :image
   mount_uploader :image, ImageUploader
   # mount_uploader :video, VideoUploader
-  
+
   validates :title, presence: true, length: { maximum: 50 }
 end

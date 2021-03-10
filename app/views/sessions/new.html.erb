@@ -1,7 +1,7 @@
 <div class=login_main>
 
   <div class="text-center">
-    <h1>Log in</h1>
+    <h1>LOG IN</h1>
   </div>
 
   <div class="row">
@@ -11,18 +11,20 @@
 
         <div class="form-group">
           <%= f.label :email, 'Email' %>
-          <%= f.email_field :email, class: 'form-control' %>
+          <%= f.email_field :email, class: 'form', placeholder: "akira@mail.com" %>
         </div>
 
         <div class="form-group">
           <%= f.label :password, 'Password' %>
-          <%= f.password_field :password, class: 'form-control' %>
+          <%= f.password_field :password, class: 'form' %>
         </div>
 
         <%= f.submit 'LOG IN', class: 'btn btn-primary btn-block' %>
       <% end %>
 
-      <p>New user? <%= link_to 'Sign up now!', signup_path %></p>
+      <p>New user? <%= link_to 'Register now!', signup_path %></p>
     </div>
   </div>
+  <%= link_to 'Guest Login（閲覧用）', toppage_guest_sign_in_path, method: :post, class:"btn btn-lg btn-success" %>
+
 </div>

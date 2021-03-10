@@ -6,7 +6,7 @@
 
 <div class="user_new">
   <div class="text-center">
-    <h1>Sign up</h1>
+    <h1>REGISTER</h1>
   </div>   
       
   <div class="row center-block">
@@ -14,11 +14,6 @@
       
       
       <%= form_with(model: @user, local: true) do |f| %>
-      
-      
-        <%# <div>
-          <i class="fa fa-user-circle fa-6x" aria-hidden="true"></i>
-          <%= f.file_field :avatar, style: "display:none;"%>
       
         <div class="form-group">
           <%= f.label :name, 'Name' %><br>
@@ -40,7 +35,7 @@
           <%= f.password_field :password_confirmation, class: 'form' %>
         </div>
 
-        <%= f.submit 'Sign up', class: 'btn btn-primary btn-block' %>
+        <%= f.submit 'REGISTER', class: 'btn btn-primary btn-block' %>
       <% end %>
     </div>
   </div>

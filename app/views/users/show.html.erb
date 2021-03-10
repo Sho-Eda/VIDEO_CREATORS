@@ -45,13 +45,13 @@
                         </div>
                     </div>
                     
-                    <%# <div class="relationships_btn_all"> %>
-                        <%# <div> %>
-                           <%#= likes_user_path(@user) %>
-                        <%# </div>
-                        <div> %>
-                            <%#= likes_user_path(@user) %>
-                        <%# </div> %>
+                    <div class="relationships_btn_all">
+                        <div>
+                           <a href="<%= likes_user_path(@user) %>">likes</a>
+                        </div>
+                        <div>
+                            <a href="<%= likes_user_path(@user) %>"><%= @count_likes %></a>
+                        </div>
                     </div>
               </div>    
             </div>  

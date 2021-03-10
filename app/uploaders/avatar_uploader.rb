@@ -21,10 +21,9 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
-  def default_url(*args) 
-    "/images/" + [version_name, "default-avatar.png"].compact.join('_')
-  end 
-  
+  def default_url(*_args)
+    '/images/' + [version_name, 'default-avatar.png'].compact.join('_')
+  end
 
   # Process files as they are uploaded:
   # process scale: [200, 300]
@@ -41,7 +40,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Add an allowlist of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_allowlist
-    %w(jpg jpeg gif png)
+    %w[jpg jpeg gif png]
   end
 
   def size_range
@@ -49,21 +48,21 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   def filename
-    original_filename if original_filename
+    original_filename
   end
 
   process resize_to_fill: [130, 130]
 
   version :thumb do
-    process resize_to_fill: [40,40]
+    process resize_to_fill: [40, 40]
   end
 
   version :thumb2 do
-    process resize_to_fill: [30,30]
+    process resize_to_fill: [30, 30]
   end
 
   version :thumb3 do
-    process resize_to_fill: [20,20]
+    process resize_to_fill: [20, 20]
   end
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.

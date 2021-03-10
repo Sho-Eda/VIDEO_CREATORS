@@ -11,7 +11,6 @@
         padding: 0 auto;
         background-color:#f4f7f6;
         display: flex;
-    
     }
     
     .container{
@@ -43,20 +42,6 @@
         text-align: center;
     }
     
-    // .media_all .col-md-3 col-sm-2 col-xs-1{
-    //         width: 400px;
-    //         height: auto;
-    //         background-color:white;
-    //         margin-top: 100px;
-    //         margin-left: 30px;
-    //         margin-right: 30px;
-    //         margin-bottom: 100px;
-    //         display: block;
-    //         justify-content: center;
-    //         text-align: center;
-    // }
-    
-    
     .media:first-child {
         margin-top: 70px;
     }
@@ -68,29 +53,25 @@
     }
     
     .media .post_title p{
-        padding-top: 10px;
-        padding-left: 10px;
-        font-size : 13px;
-        font-weight: 500;
+        padding-top: 15px;
+        padding-left: 20px;
+        // padding-bottom: 10px;
+        font-size : 14px;
+        font-weight: 600;
         text-align: left;
-    
     }
-    
     
     .media-body{
         padding: 7px;
         margin: 0 20px 20px 0;
-        
     }
     
     .posts_paginate{
         display: flex;
         justify-content: center;
-        
     }
     
     .post_thumb{
-        // border-radius: 50%;
         margin-right: 50px;
     }
     
@@ -98,7 +79,7 @@
         display: flex;
         justify-content: flex-start;
         margin-top: 30px;
-        margin-left: 10px;
+        margin-left: 20px;
         margin-bottom: 5px;
     }
     
@@ -114,11 +95,9 @@
         border-radius: 50%;
         width: 20px;
         height: 20px;
-        // margin-top: 8px;
     }
     
     .read_more{
-        // background-color: #339966;
         color: #fff;
         margin-top: 30px;
     }
@@ -126,22 +105,21 @@
     .read_more .btn{
         background-color: #49c5b6;
         color: #fff;
-        // border: 1px solid #333;
     }
     
-    .post_title{
-        padding-left: 20px;
+
+    .post_content{
+        padding: 0 20px;
     }
     
-    .post_title p{
-        margin: 20px auto;
-        width: 640px;
-        // letter-spacing: 1px;
-        font-size: 16px;
+    .post_content p{
+        // margin: 10px auto;
+        text-align: left;
+        width: 100%;
+        font-size: 12px;
         font-weight: 500;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.3px;
         
-        // padding: 20px;
     }
     
     // 新規投稿画面
@@ -152,7 +130,6 @@
     }
     
     .post_new .btn{
-        // width: 400px;
         margin: 40px 0;
     }
     
@@ -422,9 +399,6 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    // margin-left: 25px;
-    // padding-left: 100px;
-
 }
 
 .media{
@@ -441,20 +415,6 @@
     text-align: center;
 }
 
-// .media_all .col-md-3 col-sm-2 col-xs-1{
-//         width: 400px;
-//         height: auto;
-//         background-color:white;
-//         margin-top: 100px;
-//         margin-left: 30px;
-//         margin-right: 30px;
-//         margin-bottom: 100px;
-//         display: block;
-//         justify-content: center;
-//         text-align: center;
-// }
-
-
 .media:first-child {
     margin-top: 70px;
 }
@@ -466,14 +426,18 @@
 }
 
 .media .post_title p{
-    padding-top: 10px;
-    padding-left: 10px;
-    font-size : 13px;
-    font-weight: 500;
-    text-align: left;
-
+    width: 100%;
+    margin: 0 auto;
 }
 
+.media .post_title p{
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    font-size : 14px;
+    font-weight: 600;
+    text-align: left;
+}
 
 .media-body{
     padding: 7px;
@@ -496,7 +460,7 @@
     display: flex;
     justify-content: flex-start;
     margin-top: 30px;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-bottom: 5px;
 }
 
@@ -516,30 +480,44 @@
 }
 
 .read_more{
-    // background-color: #339966;
     color: #fff;
     margin-top: 30px;
+
 }
 
 .read_more .btn{
     background-color: #49c5b6;
     color: #fff;
-    // border: 1px solid #333;
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
-.post_title{
-    padding-left: 20px;
+// .post_title{
+//     padding-left: 20px;
+// }
+
+// .post_title p{
+//     margin: 20px auto;
+//     width: 640px;
+//     // letter-spacing: 1px;
+//     font-size: 16px;
+//     font-weight: 600;
+//     letter-spacing: 0.5px;
+    
+// }
+
+.post_content{
+    padding: 0 20px;
 }
 
-.post_title p{
-    margin: 20px auto;
-    width: 640px;
-    // letter-spacing: 1px;
-    font-size: 16px;
+.post_content p{
+    // margin: 10px auto;
+    text-align: left;
+    width: 100%;
+    font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.5px;
     
-    // padding: 20px;
 }
 
 // 新規投稿画面
@@ -550,13 +528,7 @@
 }
 
 .post_new .btn{
-    // width: 400px;
     margin: 40px 0;
-}
-
-.form-group{
-    //  margin-left: 170px;
-    
 }
 
 .post_new .text{
@@ -569,16 +541,6 @@
     padding-left: 35px;
     margin: 20px 0;
 }
-
-// .title p{
-//     font-size: 20px;
-//     font-weight: 600;
-//     border: none;
-//     // background-color: #97999B;
-//     margin-top: 60px;
-//     margin-bottom: 70px;
-// }
-
 
 .image_post{
     margin: 0 auto;

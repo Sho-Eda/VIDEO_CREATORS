@@ -1,13 +1,10 @@
 class ApplicationController < ActionController::Base
+  include SessionsHelper
 
-include SessionsHelper
-
- private
+  private
 
   def require_user_logged_in
-    unless logged_in?
-      redirect_to login_url
-    end
+    redirect_to login_url unless logged_in?
   end
 
   def counts(user)
@@ -18,9 +15,9 @@ include SessionsHelper
     @count_reels = user.reels.count
   end
 
-  # def log_in(user)
-  #   session[:user_id] = user.id
-  # end
+  def log_in(user)
+    session[:user_id] = user.id
+  end
 
   # def guest_user
   #   current_user == User.find_by(email: 'guest@example.com')

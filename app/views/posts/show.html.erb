@@ -50,7 +50,7 @@
             <%= link_to "Delete", @post, method: :delete, data: { confirm: "You sure?" }, class: 'btn_delete' %>
             <%= link_to "Edit", edit_post_path(@post), class: 'btn_edit' %>
           <% else %>
-            <%#= render 'favorites/favorite_button', post: @post %>
+            <%= render 'favorites/favorite_button', post: @post %>
           <% end %>
         </div>
         <div>
