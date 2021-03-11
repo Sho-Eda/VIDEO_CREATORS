@@ -1,7 +1,7 @@
 class ToppagesController < ApplicationController
   def index
     @posts = Post.all.order(id: :desc).page(params[:page]).per(6)
-    @category = Category.where(ancestry: nil)
+    # @category = Category.where(ancestry: nil)
   end
 
   def new_guest
