@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :require_user_logged_in
   before_action :corrent_user, only: [:destroy]
-  before_action :set_parents, only: [:new, :show]
+  before_action :set_parents, only: [:new, :show, :edit]
 
   def index
     @posts = current_user.posts.order(id: :desc).page(params[:page]).per(3)
