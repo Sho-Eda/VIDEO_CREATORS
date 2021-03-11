@@ -86,3 +86,5 @@ gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
 
 gem 'ancestry'
+
+gem 'seed-fu'
