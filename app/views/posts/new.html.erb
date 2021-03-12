@@ -5,6 +5,14 @@
         <%= f.label :image, 'HEADER IMAGE', class: "image_input_btn" %>
         <%= f.file_field :image, :accept => 'image/*', class: "image_form", style: "display:none;" %>
     </div>   
+
+    <%= f.label :category, 'カテゴリ' %>
+      <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |category| %>
+        <%= category.label do %>
+          <%= category.check_box %>
+          <%= category.text %>
+        <% end %>
+       <% end %>
       
     <div class="form-group ">
       <div class="row">

@@ -8,8 +8,6 @@ class User < ApplicationRecord
   validates :introduction, presence: false, length: { maximum: 200 }
   has_secure_password
 
-  # has_one_attached :avatar
-  # mount_uploader :image, ImageUploader
   mount_uploader :avatar, AvatarUploader
 
   has_many :posts, dependent: :destroy

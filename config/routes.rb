@@ -21,20 +21,11 @@ Rails.application.routes.draw do
 
   resources :posts do
     resources :comments, only: %i[create destroy]
-    
-    collection do
-      get 'top'
-      get 'get_category_children', defaults: { fomat: 'json'}
-      get 'get_category_grandchildren', defaults: { fomat: 'json'}
-      get 'name_search'
-    end
-    
-    member do
-      get 'search'
-    end
+
   end
 
   resources :reels, only: %i[show new create destroy edit update]
   resources :favorites, only: %i[create destroy]
   resources :relationships, only: %i[create destroy]
+  resources :post_category, only: %i[index show create]
 end
