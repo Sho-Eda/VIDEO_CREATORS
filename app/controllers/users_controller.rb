@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :require_user_logged_in, only: %i[index show edit followings followers likes]
-  before_action :set_parents, only: [:show, :edit]
 
   def index
     @users = User.order(id: :desc).page(params[:page]).per(25)
@@ -77,10 +76,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :introduction, :avatar, :avatar_cache)
-  end
-
-  def set_parents
-    @parents = Category.where(ancestry: 1)
   end
 
 end
